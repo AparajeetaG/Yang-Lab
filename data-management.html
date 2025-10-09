@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Management System - Yang Lab</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <style>
+        body { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; margin-bottom: 40px; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 10px; }
+        nav { margin-top: 20px; }
+        nav a { color: white; text-decoration: none; padding: 10px 20px; margin: 0 5px; background: rgba(255,255,255,0.2); border-radius: 5px; }
+        nav a:hover { background: rgba(255,255,255,0.3); }
+        .hero { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 40px; border-radius: 10px; margin-bottom: 30px; }
+        .feature-box { background: #f8f9fa; padding: 25px; margin: 20px 0; border-radius: 10px; border-left: 5px solid #667eea; }
+        .download-section { background: #d5f4e6; padding: 30px; border-radius: 10px; margin: 30px 0; border: 2px solid #27ae60; }
+        .screenshot-placeholder { background: #ecf0f1; padding: 100px; text-align: center; border-radius: 10px; margin: 20px 0; color: #7f8c8d; border: 2px dashed #bdc3c7; }
+        .install-steps { background: #fff3cd; padding: 25px; border-radius: 10px; margin: 20px 0; border-left: 5px solid #ffc107; }
+        .step { background: white; padding: 15px; margin: 10px 0; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        code { background: #2c3e50; color: #ecf0f1; padding: 3px 8px; border-radius: 3px; font-size: 14px; }
+        .download-btn { background: #27ae60; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; margin: 10px 5px; font-weight: bold; }
+        .download-btn:hover { background: #229954; }
+        .requirements { background: #e8f4f8; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        ul { line-height: 1.8; }
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+        .tech-badge { background: #3498db; color: white; padding: 8px 15px; border-radius: 20px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🫀 Yang Lab</h1>
+        <p>Cardiac Imaging Research | Cedars-Sinai</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h1>📊 Data Management Query System</h1>
+            <p style="font-size: 18px; margin-top: 20px;">A powerful web-based tool for managing and querying cardiac imaging research datasets</p>
+        </div>
+
+        <section>
+            <h2>Overview</h2>
+            <p>The Yang Lab Data Management Query System is a custom-built Python application that provides a comprehensive interface for managing research datasets. The system enables efficient organization, search, and analysis of cardiac imaging files including DICOM, IMA, DAT, and MAT formats.</p>
+            
+            <div class="tech-stack">
+                <span class="tech-badge">🐍 Python</span>
+                <span class="tech-badge">🌐 Flask</span>
+                <span class="tech-badge">📊 Pandas</span>
+                <span class="tech-badge">💾 Box Storage</span>
+                <span class="tech-badge">📈 Excel Export</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Key Features</h2>
+            
+            <div class="feature-box">
+                <h3>🔍 Advanced Search & Filtering</h3>
+                <ul>
+                    <li><strong>Multi-criteria Search:</strong> Filter by folder, subject, file type, date range</li>
+                    <li><strong>File Type Detection:</strong> Automatically identify DICOM (.dcm), IMA (.ima), DAT (.dat), and MAT (.mat) files</li>
+                    <li><strong>Path Search:</strong> Search within full folder paths</li>
+                    <li><strong>Depth Filtering:</strong> Filter by folder hierarchy depth</li>
+                </ul>
+            </div>
+
+            <div class="feature-box">
+                <h3>📂 Folder Tree Aggregation</h3>
+                <ul>
+                    <li><strong>Tree View:</strong> See total file counts across entire folder hierarchies</li>
+                    <li><strong>Individual View:</strong> View file counts for specific folders only</li>
+                    <li><strong>Toggle Views:</strong> Switch between aggregated and individual folder views</li>
+                    <li><strong>Deep Scanning:</strong> Traverses all subfolder levels automatically</li>
+                </ul>
+            </div>
+
+            <div class="feature-box">
+                <h3>📊 Data Analytics</h3>
+                <ul>
+                    <li><strong>Real-time Statistics:</strong> View total counts for folders, files, and processed data</li>
+                    <li><strong>Processing Status:</strong> Track which datasets have been processed (.mat files exist)</li>
+                    <li><strong>Date Tracking:</strong> Monitor file creation and modification dates</li>
+                    <li><strong>Visual Indicators:</strong> Color-coded rows for quick status identification</li>
+                </ul>
+            </div>
+
+            <div class="feature-box">
+                <h3>📥 Export Capabilities</h3>
+                <ul>
+                    <li><strong>Excel Export:</strong> Export filtered results to Excel spreadsheets</li>
+                    <li><strong>Summary Reports:</strong> Automatic generation of data summaries</li>
+                    <li><strong>Flexible Views:</strong> Export either aggregated or individual folder data</li>
+                </ul>
+            </div>
+
+            <div class="feature-box">
+                <h3>🌐 Web-Based Interface</h3>
+                <ul>
+                    <li><strong>Browser Access:</strong> No complex desktop software needed</li>
+                    <li><strong>Intuitive Design:</strong> User-friendly interface with clear navigation</li>
+                    <li><strong>Responsive Layout:</strong> Works on desktop and laptop computers</li>
+                    <li><strong>Real-time Updates:</strong> Instant search results as you type</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>System Screenshots</h2>
+            <div class="screenshot-placeholder">
+                <p><strong>Main Dashboard Interface</strong></p>
+                <p>Screenshots will be added soon</p>
+            </div>
+            <div class="screenshot-placeholder">
+                <p><strong>Search and Filter Panel</strong></p>
+                <p>Screenshots will be added soon</p>
+            </div>
+        </section>
+
+        <section class="download-section">
+            <h2>📥 Download & Installation</h2>
+            <p><strong>For Yang Lab Members:</strong> This system is designed for internal lab use to manage research datasets stored in Box.</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <a href="human_folder_webV3.py" class="download-btn" download>⬇️ Download Python Script</a>
+            </div>
+
+            <div class="requirements">
+                <h3>System Requirements</h3>
+                <ul>
+                    <li><strong>Python 3.7 or higher</strong> (Anaconda recommended)</li>
+                    <li><strong>Required Python packages:</strong>
+                        <ul>
+                            <li>Flask</li>
+                            <li>Pandas</li>
+                            <li>openpyxl (for Excel export)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Box Desktop App</strong> with access to Human folder</li>
+                    <li><strong>Operating System:</strong> Windows, macOS, or Linux</li>
+                    <li><strong>Web Browser:</strong> Chrome, Firefox, Safari, or Edge</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="install-steps">
+            <h2>🚀 Installation Instructions</h2>
+            
+            <div class="step">
+                <h3>Step 1: Install Python (if not already installed)</h3>
+                <p>Download and install Anaconda from: <a href="https://www.anaconda.com/download" target="_blank">anaconda.com/download</a></p>
+            </div>
+
+            <div class="step">
+                <h3>Step 2: Install Required Packages</h3>
+                <p>Open Anaconda Prompt (Windows) or Terminal (Mac/Linux) and run:</p>
+                <code>pip install flask pandas openpyxl</code>
+            </div>
+
+            <div class="step">
+                <h3>Step 3: Set Up Box Access</h3>
+                <p>Ensure you have:</p>
+                <ul>
+                    <li>Box Desktop App installed and synced</li>
+                    <li>Access to the Box/Data/Human folder</li>
+                    <li>Folder synced to your local computer</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h3>Step 4: Download the Script</h3>
+                <p>Click the download button above to get <code>human_folder_webV3.py</code></p>
+            </div>
+
+            <div class="step">
+                <h3>Step 5: Configure the Path</h3>
+                <p>Open the Python file in a text editor and update this line to match your Box folder location:</p>
+                <code>BOX_HUMAN_ROOT = r"C:\Users\YourUsername\Box\Data\Human"</code>
+                <p><em>Replace "YourUsername" with your actual username</em></p>
+            </div>
+
+            <div class="step">
+                <h3>Step 6: Run the Application</h3>
+                <p>Open Anaconda Prompt, navigate to the folder containing the script, and run:</p>
+                <code>python human_folder_webV3.py</code>
+                <p>The web interface will automatically open in your browser at <code>http://localhost:5000</code></p>
+            </div>
+
+            <div class="step">
+                <h3>Step 7: Perform Initial Scan</h3>
+                <p>Click the <strong>"Deep Rescan All Folders"</strong> button to index your data. This may take several minutes depending on the number of folders.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Usage Guide</h2>
+            
+            <h3>Basic Operations</h3>
+            <ul>
+                <li><strong>Searching:</strong> Use the filter dropdowns and search boxes to find specific datasets</li>
+                <li><strong>Toggle Views:</strong> Click "Toggle View Mode" to switch between aggregated tree view and individual folder view</li>
+                <li><strong>Exporting:</strong> Click "Export to Excel" to download current filtered results</li>
+                <li><strong>Rescanning:</strong> Click "Deep Rescan All Folders" to update the database with any new files</li>
+            </ul>
+
+            <h3>Color Coding</h3>
+            <ul>
+                <li><strong>Green rows:</strong> Folders with data files (DICOM, IMA, or DAT)</li>
+                <li><strong>Gray rows:</strong> Processed folders (contain .mat files)</li>
+                <li><strong>Yellow rows:</strong> Empty folders (no data files)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Support & Contact</h2>
+            <p>For questions, issues, or access requests, please contact:</p>
+            <ul>
+                <li><strong>Lab Email:</strong> <em>[Add lab email]</em></li>
+                <li><strong>Technical Support:</strong> <em>[Add contact]</em></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/ApargeetG/Yang-Lab">Yang Lab Repository</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Future Enhancements</h2>
+            <p>We are working on making this system fully accessible online. Future updates may include:</p>
+            <ul>
+                <li>✨ Cloud deployment for direct browser access</li>
+                <li>🔐 User authentication and access control</li>
+                <li>📊 Advanced data visualization dashboards</li>
+                <li>🔗 Integration with Box API for real-time data access</li>
+                <li>📱 Mobile-responsive design</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer style="text-align: center; margin-top: 50px; padding: 20px; background: #f0f4f8; border-radius: 10px;">
+        <p><strong>Yang Lab</strong> | Cedars-Sinai Medical Center</p>
+        <p>Data Management Query System V3</p>
+    </footer>
+</body>
+</html>
