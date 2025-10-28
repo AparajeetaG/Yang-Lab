@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OneDrive Data Management – Yang Lab</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.55; margin: 24px; color: #111; }
+    h1 { margin: 0 0 8px; }
+    h2 { margin-top: 28px; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 16px 20px; }
+    code, pre { background: #f6f8fa; padding: 2px 6px; border-radius: 4px; }
+    pre { padding: 12px; overflow: auto; }
+    .btn {
+      display: inline-block; background: #111; color: #fff; border: 1px solid #111;
+      padding: 10px 16px; border-radius: 8px; text-decoration: none; font-weight: 600;
+    }
+    .note { color: #666; font-size: .95rem; }
+    header a { margin-right: 12px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>OneDrive Data Management</h1>
+    <div class="note">Yang Lab · Cardiac Imaging Research</div>
+    <p>
+      <a href="../index.html">Home</a>
+      <a href="./index.html">Research</a>
+    </p>
+  </header>
+
+  <h2>Overview</h2>
+  <p>This Python script scans a locally‑synced OneDrive <em>Human</em> folder (all subfolders), counts files by type (including DICOM <code>.dcm/.ima</code>, DAT <code>.dat</code>, NIfTI <code>.nii/.nii.gz</code>), and exports a multi‑sheet Excel report. It also marks each subject as <strong>Processed</strong> (if any <code>.mat</code>) or <strong>Not Processed</strong> (only <code>.dat/.ima</code>).</p>
+
+  <h2>Prerequisites</h2>
+  <ul>
+    <li>Python 3.9+ (3.10+ recommended)</li>
+    <li>Packages: <code>pandas</code>, <code>openpyxl</code></li>
+    <li>OneDrive signed in and the <code>Human</code> folder synced locally</li>
+  </ul>
+  <pre>pip install pandas openpyxl</pre>
+
+  <h2>Download</h2>
+  <!-- Adjust the href if your file lives somewhere else -->
+  <p><a class="btn" href="../downloads/human_folder_analysis.py" download>⬇ Download the Python Script</a></p>
+  <p class="note">If the file opens in the browser, right‑click the button and choose “Save link as…”.</p>
+
+  <h2>Run</h2>
+  <p><strong>Windows:</strong></p>
+  <pre>python human_folder_analysis.py --root "C:\Path\To\OneDrive\Human" --out "C:\Path\To\Output"</pre>
+  <p><strong>macOS/Linux:</strong></p>
+  <pre>python3 human_folder_analysis.py --root "/Users/&lt;you&gt;/Library/CloudStorage/OneDrive-.../Human" --out "$HOME/Documents"</pre>
+
+  <p class="note">The script prints a summary and saves a timestamped Excel file with sheets: Overview, File_Types, one per main subfolder, and All_Folders.</p>
+</body>
+</html>
